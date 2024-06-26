@@ -4,7 +4,7 @@ from django.urls import reverse
 from datetime import datetime, date
 
 class Category(models.Model):
-    title = models.CharField(max_length=255)
+    name = models.CharField(max_length=255)
     slug = models.SlugField()
 
     class Meta:
@@ -12,10 +12,10 @@ class Category(models.Model):
         verbose_name_plural = 'Categories'
 
     def __str__(self):
-        return self.title
+        return self.name
 
     def get_absolute_url(self):
-        return f'/{self.slug}/' 
+        return reverse('frontpage') 
 
 class Post(models.Model):
     ACTIVE = 'active'
