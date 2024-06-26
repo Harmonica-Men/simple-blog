@@ -39,7 +39,7 @@ class Post(models.Model):
     post_date = models.DateField(auto_now_add=True)
     created_at = models.DateTimeField(auto_now_add=True)
     status = models.CharField(max_length=10, choices=CHOICES_STATUS, default=ACTIVE)
-    category = models.CharField(max_length=200)
+    category = models.CharField(max_length=200, default='codeing')
 
     
     
