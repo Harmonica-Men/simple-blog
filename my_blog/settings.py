@@ -37,7 +37,7 @@ CLOUDINARY_URL = "cloudinary://394961391133235:Pj9-5H6dpGHJbBmra5wtJ2ci_OQ@dtbji
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['8000-harmonicamen-simpleblog-nwzhouscjn9.ws.codeinstitute-ide.net'
                  '.herokuapp.com',

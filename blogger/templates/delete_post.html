@@ -3,6 +3,7 @@
 {% block title %} Delete My Blog Post {% endblock %}
 
 {% block content %}
+{% if user.is_authenticated %}
 
 
 <h1>Delete Blog Post</h1>
@@ -20,5 +21,7 @@
 </div>
 <hr>
 <br>
-    
+{% else %}
+You need to login or register, to make changes
+{% endif %}
 {% endblock %}

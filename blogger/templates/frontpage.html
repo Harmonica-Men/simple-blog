@@ -4,17 +4,24 @@
 
 {% block content %}
 
+
+
 <h1>Blog Post</h1>
 <ul>
 {% for post in object_list %}
     <li> <a href="{% url 'article-detail' post.pk %}">
         {{ post.title }}</a> {{ post.auth }} - {{ post.slug }} <br>
         {{ post.author }} - {{ post.post_date }}<br>
+
+
+        {% if user.is_authenticated %}
          <a href="{% url 'update-post' post.pk %}">EDIT</a> --
 
          <a href="{% url 'delete-post' post.pk %}">DELETE POST</a>
 
-        {{ post.body }}
+        {% endif %}
+
+        {{ post.body|slice:":222"|safe }}
     </li>
     <hr>
     <br>
@@ -23,5 +30,4 @@
 </ul>
 
 
-    
 {% endblock %}
