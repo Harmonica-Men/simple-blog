@@ -4,18 +4,20 @@ from django.urls import reverse
 from datetime import datetime, date
 
 class Category(models.Model):
-    name = models.CharField(max_length=255)
-    slug = models.SlugField()
+     name = models.CharField(max_length=200)
+#     # title = models.CharField(max_length=255)
+#     # slug = models.SlugField(unique=True)
 
-    class Meta:
-        ordering = ('title',)
-        verbose_name_plural = 'Categories'
 
-    def __str__(self):
-        return self.name
+     class Meta:
+#         ordering = ('name',)
+         verbose_name_plural = 'Categories'
 
-    def get_absolute_url(self):
-        return reverse('frontpage') 
+     def __str__(self):
+         return self.name
+
+     def get_absolute_url(self):
+         return reverse('frontpage') 
 
 class Post(models.Model):
     ACTIVE = 'active'
@@ -26,18 +28,20 @@ class Post(models.Model):
     (DRAFT, 'Draft')
     )
 
-    # category = models.ForeignKey(Category, related_name='posts', on_delete=models.CASCADE)
+    #category = models.ForeignKey(Category, related_name='posts', on_delete=models.CASCADE)
+    
     title = models.CharField(max_length=200)
     title_tag = models.CharField(max_length=200)
     author = models.ForeignKey(User, related_name='posts', on_delete=models.CASCADE)
-    #   category = models.ForeignKey(Category, )
-
     slug = models.SlugField()
     intro = models.TextField()
     body = models.TextField()
     post_date = models.DateField(auto_now_add=True)
     created_at = models.DateTimeField(auto_now_add=True)
     status = models.CharField(max_length=10, choices=CHOICES_STATUS, default=ACTIVE)
+    category = models.CharField(max_length=200)
+
+    
     
     class Meta:
         ordering = ('-created_at',)
