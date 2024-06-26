@@ -37,7 +37,7 @@ CLOUDINARY_URL = "cloudinary://394961391133235:Pj9-5H6dpGHJbBmra5wtJ2ci_OQ@dtbji
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['8000-harmonicamen-simpleblog-nwzhouscjn9.ws.codeinstitute-ide.net'
                  '.herokuapp.com',
@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'blogger',
+    'members',
 ]
 
 MIDDLEWARE = [
@@ -158,3 +159,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+LOGIN_REDIRECT_URL = 'frontpage'
+LOGOUT_REDIRECT_URL = 'frontpage'

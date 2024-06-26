@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
-
+from datetime import datetime, date
 
 class Category(models.Model):
     title = models.CharField(max_length=255)
@@ -35,9 +35,10 @@ class Post(models.Model):
     slug = models.SlugField()
     intro = models.TextField()
     body = models.TextField()
+    post_date = models.DateField(auto_now_add=True)
     created_at = models.DateTimeField(auto_now_add=True)
     status = models.CharField(max_length=10, choices=CHOICES_STATUS, default=ACTIVE)
-
+    
     class Meta:
         ordering = ('-created_at',)
 
