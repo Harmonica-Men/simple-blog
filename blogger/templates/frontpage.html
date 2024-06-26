@@ -1,3 +1,9 @@
+{% extends 'base.html' %}
+
+{% block title %} Super blogpost {% endblock %}
+
+{% block content %}
+
 <h1>Blog Post</h1>
 <ul>
 {% for post in object_list %}
@@ -11,3 +17,7 @@
 
 {% endfor %}
 </ul>
+
+
+    
+{% endblock %}
