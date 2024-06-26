@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.urls import reverse
 from datetime import datetime, date
 
+
 class Category(models.Model):
      name = models.CharField(max_length=200)
 #     # title = models.CharField(max_length=255)
