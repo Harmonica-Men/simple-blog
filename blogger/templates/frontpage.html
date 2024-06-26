@@ -10,7 +10,10 @@
     <li> <a href="{% url 'article-detail' post.pk %}">
         {{ post.title }}</a> {{ post.auth }} - {{ post.slug }} <br>
         {{ post.author }} <br>
-         - <a href="{% url 'update-post' post.pk %}">EDIT</a>
+         <a href="{% url 'update-post' post.pk %}">EDIT</a> --
+
+         <a href="{% url 'delete-post' post.pk %}">DELETE POST</a>
+
         {{ post.body }}
     </li>
     <hr>
