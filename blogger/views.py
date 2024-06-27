@@ -6,29 +6,24 @@ from .models import Post, Category
 from .forms import PostForm
 from django.urls import reverse_lazy
 
+
+#class based view
 class FrontpageView(ListView):
     model = Post
     template_name = 'frontpage.html'
     ordering = ['-post_date']
 
-# def CategoryView(request, cats):
-#     category_posts = Post.objects.filter(category=cats)
-#     return render (request, 'categories.html', {'cats':cats.title}, {'category_posts': category_posts})
+    def get_context_data(self, *args, **kwargs):
+        cat_menu = Category.objects.all()
+        context = super(FrontpageView, self).get_context_data(*args, **kwargs)
+        context["cat_menu"] = cat_menu
+        return context
 
-    
-    #return render(request, 'categories.html', {'cats':cats.title(), 'category_posts': category_posts})
 
-# class CategoryView(View):
-#     template_name = 'categories.html'
+def CategoryListView(request):
+    cat_menu_list = Category.objects.all()
+    return render(request, 'category_list.html', {'cat_menu_list':cat_menu_list})
 
-#     def get(self, request, cats):
-#         category = get_object_or_404(Category, name=cats)
-#         category_posts = Post.objects.filter(category=category)
-#         context = {
-#             'cats': category.name,
-#             'category_posts': category_posts,
-#         }
-#         return render(request, self.template_name, context)
 
 class CategoryView(View):
     template_name = 'categories.html'
@@ -49,6 +44,12 @@ class CategoryView(View):
 class BlogPostDetailView(DetailView):
     model = Post
     template_name = 'blogpost.html'
+
+    # def get_context_data(self, *args, **kwargs):
+    #    cat_menu = Category.objects.all()
+    #    context = super(BlogPostDetailView, self).get_context_data(*args, **kwargs)
+    #    context["cat_menu"] = cat_menu
+    #    return context
 
 
 class AddPostView(CreateView):
