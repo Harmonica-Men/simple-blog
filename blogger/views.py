@@ -1,17 +1,20 @@
 from django.shortcuts import render, get_object_or_404
-from django.http import Http404
+from django.http import Http404, HttpResponseRedirect
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.views import View
 from .models import Post, Category
 from .forms import PostForm
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
 
+def LikeView(request, pk):
+    post = get_object_or_404(Post, id=request.POST.get('post_id'))
+    post.likes.add(request.user)
+    return HttpResponseRedirect(reverse('article-detail', args=[str(pk)]))
 
-#class based view
 class FrontpageView(ListView):
     model = Post
     template_name = 'frontpage.html'
-    ordering = ['-post_date']
+    ordering = ['post_date']
 
     def get_context_data(self, *args, **kwargs):
         cat_menu = Category.objects.all()
@@ -45,11 +48,14 @@ class BlogPostDetailView(DetailView):
     model = Post
     template_name = 'blogpost.html'
 
-    # def get_context_data(self, *args, **kwargs):
-    #    cat_menu = Category.objects.all()
-    #    context = super(BlogPostDetailView, self).get_context_data(*args, **kwargs)
-    #    context["cat_menu"] = cat_menu
-    #    return context
+    def get_context_data(self, *args, **kwargs):
+       cat_menu = Category.objects.all()
+       context = super(BlogPostDetailView, self).get_context_data(*args, **kwargs)
+       helper = get_object_or_404(Post, id=self.kwargs['pk']) 
+       total_likes = helper.total_likes()
+       context["cat_menu"] = cat_menu
+       context["total_likes"] = total_likes
+       return context
 
 
 class AddPostView(CreateView):

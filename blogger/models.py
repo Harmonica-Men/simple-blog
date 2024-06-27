@@ -41,14 +41,19 @@ class Post(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     status = models.CharField(max_length=10, choices=CHOICES_STATUS, default=ACTIVE)
     category = models.CharField(max_length=200, default='coding')
+    likes = models.ManyToManyField(User, related_name='blog_posts_likes')
 
-    
+    def total_likes(self):
+        return self.likes.count()
+        
     
     class Meta:
         ordering = ('-created_at',)
 
     def __str__(self):
         return self.title
+
+    
 
     def get_absolute_url(self):
         # return reverse('article-detail', args=(str(self.id)))
