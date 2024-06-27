@@ -5,6 +5,7 @@
 <ul>
 {% for post in object_list %}
     <li> <a href="{% url 'article-detail' post.pk %}">
+        {{ post.category }}
         {{ post.title }}</a> {{ post.auth }} - {{ post.slug }} <br>
         author: {{ post.author }} <br>
         cat: {{ post.category }} - {{ post.post_date }}
