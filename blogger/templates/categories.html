@@ -3,38 +3,38 @@
 {% block content %}
 
 {% if category_posts %}
-    <h1>Posts in {{ cats }}</h1>
-    <ul>
-        {% for post in category_posts %}
-            <li>{{ post.title }}
-                <a href="{% url 'article-detail' post.pk %}">
-                    {{ post.category }}
-                    {{ post.title }}</a> {{ post.auth }} - {{ post.slug }} <br>
-                    author: {{ post.author }} <br>
-                    cat: {{ post.category }} - {{ post.post_date }}
-                    
-                    <br>
-            
-                    {% if user.is_authenticated %}
-                        {% if user.id == post.author.id %}
-            
-                            <a href="{% url 'update-post' post.pk %}">EDIT</a> --
-                    
-                            <a href="{% url 'delete-post' post.pk %}">DELETE POST</a>
-                        {% endif %}
-                   
-                    {% endif %}
-            
-                    {{ post.body }}
+<h1>Posts in {{ cats }}</h1>
+<ul>
+    {% for post in category_posts %}
+    <li>{{ post.title }}
+        <a href="{% url 'article-detail' post.pk %}">
+            {{ post.category }}
+            {{ post.title }}</a> {{ post.auth }} - {{ post.slug }} <br>
+        author: {{ post.author }} <br>
+        cat: {{ post.category }} - {{ post.post_date }}
 
-                    <br>
-                    <hr>
+        <br>
+
+        {% if user.is_authenticated %}
+        {% if user.id == post.author.id %}
+
+        <a href="{% url 'update-post' post.pk %}">EDIT</a> --
+
+        <a href="{% url 'delete-post' post.pk %}">DELETE POST</a>
+        {% endif %}
+
+        {% endif %}
+
+        {{ post.body }}
+
+        <br>
+        <hr>
 
 
-            </li>
-        {% endfor %}
-    </ul>
+    </li>
+    {% endfor %}
+</ul>
 {% else %}
-    <h2>No Posts Found for {{ cats }}</h2>
+<h2>No Posts Found for {{ cats }}</h2>
 {% endif %}
 {% endblock %}

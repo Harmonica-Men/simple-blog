@@ -7,8 +7,10 @@
     <li> <a href="{% url 'article-detail' post.pk %}"> 
         {{ post.title }}</a>
 
+
         <a href="{% url 'category' post.category|slugify %}">{{ post.category }}</a>
         {{ post.category }}
+
         </a> {{ post.auth }} - {{ post.slug }} <br>
         author: {{ post.author }} <br>
         cat: {{ post.category }} - {{ post.post_date }}

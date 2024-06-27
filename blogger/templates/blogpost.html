@@ -1,31 +1,25 @@
 {% extends 'base.html' %}
+
 {% block title %} {{ post.title }} {% endblock %}
+
 {% block content %}
-
-
-<h1> {{ post.title }}</h1>
-<!-- <h4>  current user id loggend in user id : {{ user.id }}  </h4> -->
-<small> 
-    author id : {{ post.author.id }} 
-    by: {{ post.author }} - {{ post.author.first_name }} - {{ post.author.last_name }} - date: {{ post.post_date }}
-
-    {% if user.is_authenticated %}
-        {% if user.id == post.author.id %}
+    <h1>{{ post.title }}</h1>
+    <!-- <h4>Current user ID: {{ user.id }}</h4> -->
+    <small>
+        Author ID: {{ post.author.id }}<br>
+        By: {{ post.author }} - {{ post.author.first_name }} {{ post.author.last_name }}<br>
+        Date: {{ post.post_date }}
+        
+        {% if user.is_authenticated and user.id == post.author.id %}
             <a href="{% url 'update-post' post.pk %}">EDIT</a> *
             <a href="{% url 'delete-post' post.pk %}">DELETE POST</a>
         {% endif %}
-    {% endif %}
-    
-
-</small>
-<br>
-<hr>
-<br>
-{{ post.body|safe }}
-{{ post.status }}
-
-<br>
-<br>
-<a href="{% url 'frontpage' %}" class="btn btn-secondary">BACK</a>
-
+    </small>
+    <br>
+    <hr>
+    <br>
+    {{ post.body|safe }}
+    <br>
+    <br>
+    <a href="{% url 'frontpage' %}" class="btn btn-secondary">BACK</a>
 {% endblock %}

@@ -77,4 +77,3 @@ class AddCategoryView(CreateView):
     fields = '__all__'
     #fields = ('title', 'title_tag', 'body'  )
 
-
