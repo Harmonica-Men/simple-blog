@@ -4,6 +4,7 @@
 
 {% block content %}
 {% if user.is_authenticated %}
+    {% if user.id == post.author.id %}
 
 
 <h1>Edit Blog Post</h1>
@@ -18,6 +19,7 @@
 </div>
 <hr>
 <br>
+{% endif %}
 {% else %}
 You need to login or register, to make changes
 {% endif %}

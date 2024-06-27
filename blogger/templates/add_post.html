@@ -2,7 +2,7 @@
 {% block title %} Create New Blog Post {% endblock %}
 {% block content %}
 {% if user.is_authenticated %}
-
+    {% if user.id == post.author.id %}
 
 <h1>Add Blog Post</h1>
 <br>
@@ -16,7 +16,7 @@
 </div>
 <hr>
 <br>
-
+{% endif %}
 {% else %}
 You need to login or register, to make changes
 {% endif %}

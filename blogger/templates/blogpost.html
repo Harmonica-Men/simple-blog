@@ -4,16 +4,16 @@
 
 
 <h1> {{ post.title }}</h1>
-
+<!-- <h4>  current user id loggend in user id : {{ user.id }}  </h4> -->
 <small> 
-    by: {{ post.author }} - {{ post.post_date }}
-    
+    author id : {{ post.author.id }} 
+    by: {{ post.author }} - {{ post.author.first_name }} - {{ post.author.last_name }} - date: {{ post.post_date }}
+
     {% if user.is_authenticated %}
-
-        <a href="{% url 'update-post' post.pk %}">EDIT</a> *
-
-        <a href="{% url 'delete-post' post.pk %}">DELETE POST</a>
-
+        {% if user.id == post.author.id %}
+            <a href="{% url 'update-post' post.pk %}">EDIT</a> *
+            <a href="{% url 'delete-post' post.pk %}">DELETE POST</a>
+        {% endif %}
     {% endif %}
     
 

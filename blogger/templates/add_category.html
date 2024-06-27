@@ -2,21 +2,21 @@
 {% block title %} Create New Blog Category {% endblock %}
 {% block content %}
 {% if user.is_authenticated %}
+    {% if user.id == post.author.id %}
 
-
-<h1>Add Category t</h1>
-<br>
-<br>
-<div class="from-group">
-    <form method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button class="btn btn-secondary">Add Category</button>
-    </form>
-</div>
-<hr>
-<br>
-
+        <h1>Add Category t</h1>
+        <br>
+        <br>
+        <div class="from-group">
+            <form method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button class="btn btn-secondary">Add Category</button>
+            </form>
+        </div>
+        <hr>
+        <br>
+{% endif %}
 {% else %}
 You need to login or register, to make changes
 {% endif %}
