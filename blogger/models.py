@@ -2,6 +2,8 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
 from datetime import datetime, date
+# from ckeditor.fields import RichTextField
+# from django_ckeditor_5.fields import CKEditor5Field
 
 
 class Category(models.Model):
@@ -36,16 +38,19 @@ class Post(models.Model):
     author = models.ForeignKey(User, related_name='posts', on_delete=models.CASCADE)
     slug = models.SlugField()
     intro = models.TextField()
+    #body = CKEditor5Field('Content', config_name='default', blank=True, null=True)
+    #body = RichTextField(blank=True, null=True)
     body = models.TextField()
     post_date = models.DateField(auto_now_add=True)
     created_at = models.DateTimeField(auto_now_add=True)
     status = models.CharField(max_length=10, choices=CHOICES_STATUS, default=ACTIVE)
     category = models.CharField(max_length=200, default='coding')
+
     likes = models.ManyToManyField(User, related_name='blog_posts_likes')
 
     def total_likes(self):
         return self.likes.count()
-        
+
     
     class Meta:
         ordering = ('-created_at',)

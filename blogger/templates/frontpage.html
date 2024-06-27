@@ -27,7 +27,7 @@
             {% endif %}     
         {% endif %}
 
-        {{ post.body }}
+        {{ post.body|slice:":200"|safe }}
         {{ post.status }}
         
     </li>

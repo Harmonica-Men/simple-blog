@@ -11,6 +11,9 @@
 <br>
 <br>
 <div class="from-group">
+    {% load static %}
+    <script src="{% static 'django_ckeditor_5/ckeditor5/ckeditor.js' %}"></script>
+
     <form method="POST">
         {% csrf_token %}
         {{ form.as_p }}
