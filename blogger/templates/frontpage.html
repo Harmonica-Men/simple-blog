@@ -4,9 +4,12 @@
 <h1>Blog Post</h1>
 <ul>
 {% for post in object_list %}
-    <li> <a href="{% url 'article-detail' post.pk %}">
+    <li> <a href="{% url 'article-detail' post.pk %}"> 
+        {{ post.title }}</a>
+
+        <a href="{% url 'category' post.category %}">{{ post.category }}</a>
         {{ post.category }}
-        {{ post.title }}</a> {{ post.auth }} - {{ post.slug }} <br>
+        </a> {{ post.auth }} - {{ post.slug }} <br>
         author: {{ post.author }} <br>
         cat: {{ post.category }} - {{ post.post_date }}
         
