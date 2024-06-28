@@ -12,7 +12,7 @@
 <br>
 <div class="from-group">
     {% load static %}
-    <script src="{% static 'django_ckeditor_5/ckeditor5/ckeditor.js' %}"></script>
+    <!-- <script src="{% static 'django_ckeditor_5/ckeditor5/ckeditor.js' %}"></script> -->
 
     <form method="POST">
         {% csrf_token %}
@@ -20,6 +20,9 @@
         <button class="btn btn-secondary">Update</button>
     </form>
 </div>
+
+
+
 <hr>
 <br>
 {% endif %}

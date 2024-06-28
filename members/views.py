@@ -4,7 +4,7 @@ from django.shortcuts import get_object_or_404
 from django.contrib.auth.models import User
 from django.views import generic
 from django.contrib.auth.forms import UserCreationForm, UserChangeForm
-from .forms import SignUpForm, EditProfileForm
+from .forms import SignUpForm, EditProfileForm, PasswordChangingForm
 
 class UserRegisterView(generic.CreateView):
     # form_class = UserCreationForm
@@ -34,6 +34,10 @@ class UserEditView(generic.UpdateView):
 #         kwargs['user'] = self.get_object()
 #         return kwargs
 
+
+class PasswordChangeView(PasswordChangeView):
+    form_class = PasswordChangingForm
+    success_url = reverse_lazy('password_succes')
 
 class CustomPasswordChangeView(PasswordChangeView):
     template_name = 'registration/change_password.html'

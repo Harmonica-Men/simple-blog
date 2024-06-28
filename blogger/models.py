@@ -2,6 +2,9 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
 from datetime import datetime, date
+from cloudinary.models import CloudinaryField
+
+
 # from ckeditor.fields import RichTextField
 # from django_ckeditor_5.fields import CKEditor5Field
 
@@ -22,6 +25,21 @@ class Category(models.Model):
      def get_absolute_url(self):
          return reverse('frontpage') 
 
+class Profile(models.Model):
+    user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
+    bio = models.TextField()
+    profile_pic = CloudinaryField('image', null = True, blank= True)
+    website_url = models.CharField(max_length=100, null=True, blank=True)
+    twitter_url = models.CharField(max_length=100, null=True, blank=True)
+    instagram_url = models.CharField(max_length=100, null=True, blank=True)
+    facebook_url = models.CharField(max_length=100, null=True, blank=True)
+    pinterest = models.CharField(max_length=100, null=True, blank=True)
+
+    def __str__(self):
+       return str(self.user)
+
+
+
 class Post(models.Model):
     ACTIVE = 'active'
     DRAFT = 'draft'
@@ -34,6 +52,7 @@ class Post(models.Model):
     #category = models.ForeignKey(Category, related_name='posts', on_delete=models.CASCADE)
     
     title = models.CharField(max_length=200)
+    image = CloudinaryField('image', null = True, blank= True)
     title_tag = models.CharField(max_length=200)
     author = models.ForeignKey(User, related_name='posts', on_delete=models.CASCADE)
     slug = models.SlugField()

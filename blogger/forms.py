@@ -8,10 +8,11 @@ class PostForm(forms.ModelForm):
     class Meta:
         model = Post
         # fields = ['title', 'title_tag']
-        fields = ('title', 'title_tag', 'author', 'category', 'body')
+        fields = ('title', 'title_tag', 'author', 'category', 'body', 'image')
 
         widgets = {
             'title' : forms.TextInput(attrs={'class': 'form-control', 'placeholder' : 'placeholder test'}),
+            
             'title_tag' : forms.TextInput(attrs={'class': 'form-control'}),
             'author' : forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'user name', 'id': 'js_id', 'type': 'hidden'}),
             #  : forms.Select(attrs={'class': 'form-control'}),
