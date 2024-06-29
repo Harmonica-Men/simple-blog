@@ -60,7 +60,12 @@
       <div class="col-md-10">
         <div class="card-body">
           <h5 class="card-title">{{ post.author.first_name }} {{ post.author.last_name }}</h5>
+          {% url 'show_profile_page' post.author.profile.id as profile_url %}
+            <a href="{{ profile_url }}">"Profile Page !!!!"</a>
+
           <p class ="small text-muted">
+
+            
             {% if post.author.profile.website_url %} 
               <a href="post.author.profile.website_url">Website</a> | 
             {% endif %} 
