@@ -44,12 +44,6 @@
     </form>
 
     <br>
-<!-- <br>
-<p>About me as author</p>
-<br>
-<img src="{{ post.author.profile.profile_pic.url }}" width=100 height=100 class="rounded-circle"> 
-<p>Hi I'am {{ post.author.first_name }} .</p> -->
-
 
 <div class="card mb-3">
     <div class="row g-0">
@@ -57,9 +51,9 @@
 
 {% if post.author.profile.profile_pic.url %}
 
-        <img src="{{ post.author.profile.profile_pic.url }}" class="img">
+        <img src="{{ post.author.profile.profile_pic.url }}"  width="100" height="100" class="rounded-circle" alt="Profile Picture">
 {% else %}
-        <img src="{% static 'blogger/images/Anonymous-Profile-pic.jpg'%}" class="img">
+        <img src="{% static 'blogger/images/Anonymous-Profile-pic.jpg'%}"  width="100" height="100" class="rounded-circle" alt="Profile Picture">
 
 {% endif %}
       </div>

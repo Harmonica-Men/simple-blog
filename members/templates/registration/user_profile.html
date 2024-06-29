@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block title %} User Profile {% endblock %}
+
+{% block content %}
+
+<h1>User Profile  ... </h1>
+
+{{ page_user }}
+
+<div class="card mb-3">
+    <div class="row g-0">
+      <div class="col-md-2">
+
+          {% if page_user.profile_pic.url %}
+
+                  <img src="{{ page_user.profile_pic.url }}" class="img">
+          {% else %}
+                  <img src="{% static 'blogger/images/Anonymous-Profile-pic.jpg'%}" class="img">
+
+          {% endif %}
+      </div>
+   </div>
+</div>
+</div>
+<div class="col-md-10">
+  <div class="card-body">
+    <h5 class="card-title">{{ page_user.user.first_name }} {{ page_user.user.last_name }}</h5>
+    <p class ="small text-muted">
+
+      {% if page_user.website_url %} 
+        <a href="post.author.profile.website_url">Website</a> | 
+      {% endif %} 
+
+      {% if page_user.website_url %} 
+        <a href="post.author.profile.website_url"></a> Facebook | 
+      {% endif %} 
+
+      {% if page_user.website_url %} 
+        <a href="post.author.profile.website_url"></a> Instagram | 
+      {% endif %} 
+
+      {% if page_user.website_url %} 
+        <a href="post.author.profile.website_url"></a> Twitter | 
+      {% endif %} 
+
+      {% if page_user.website_url %} 
+        <a href="post.author.profile.website_url"></a> Instagram | 
+      {% endif %} 
+
+      {% if page_user.website_url %} 
+        <a href="post.author.profile.website_url"></a> Pinterest  | 
+      {% endif %} 
+
+      
+    <p class="card-text">{{ page_user.bio }}</p>
+    <!-- <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> -->
+  </div>
+</div>
+</div>
+
+
+
+
+
+{% endblock %}

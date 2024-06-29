@@ -27,7 +27,7 @@ class Category(models.Model):
 
 class Profile(models.Model):
     user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
-    bio = models.TextField()
+    bio = models.TextField(blank=True, null=True)
     profile_pic = CloudinaryField('image', null = True, blank= True)
     website_url = models.CharField(max_length=100, null=True, blank=True)
     twitter_url = models.CharField(max_length=100, null=True, blank=True)

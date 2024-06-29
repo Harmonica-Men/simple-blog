@@ -1,6 +1,5 @@
 from django.urls import path, include
-from .views import FrontpageView, BlogPostDetailView, AddPostView, UpdatePostView, DeletePostView, AddCategoryView
-from .views import CategoryView, CategoryListView, LikeView
+from .views import FrontpageView, BlogPostDetailView, AddPostView, UpdatePostView, DeletePostView, AddCategoryView, CategoryView, CategoryListView, LikeView
 
 urlpatterns = [
     path('', FrontpageView.as_view(), name= 'frontpage'),
