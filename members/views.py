@@ -8,6 +8,12 @@ from django.contrib.auth.forms import UserCreationForm, UserChangeForm
 from .forms import SignUpForm, EditProfileForm, PasswordChangingForm
 from blogger.models import Profile
 
+class EditProfilePageView(generic.UpdateView):
+    model = Profile
+    template_name = 'registration/edit_profile_page.html'
+    fields = ['bio', 'profile_pic', 'website_url', 'facebook_url', 'twitter_url', 'instagram_url']
+    success_url = reverse_lazy('frontpage')
+    
 class ShowProfilePageView(DetailView):
     model = Profile
     template_name = 'registration/user_profile.html'
