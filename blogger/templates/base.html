@@ -35,18 +35,34 @@
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       Profile
                     </a>
+                    
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <li><a class="dropdown-item" href="{% url 'edit-profile' %}">Edit Settings</a></li>
-                      {% url 'edit_profile_page' user.profile.id as edit_url %}
                       <li>
-                        <a class="dropdown-item" href="{{ edit_url }}">
-                          Edit Profile Page
-                        </a>
+                        <a class="dropdown-item" href="{% url 'edit-profile' %}">Edit Settings</a>
                       </li>
-                      {% url 'show_profile_page' user.profile.id as profile_url %}
-                      <li><a class="dropdown-item" href="{{ profile_url }}">Show Profile Page</a></li>
+                      <li>
+                        {% if user.profile.id %}
+                          {% url 'edit_profile_page' user.profile.id as edit_url %}
+                          <a class="dropdown-item" href="{{ edit_url }}">Edit Profile Page</a>
+                        {% else %}
+
+                          <!-- {% url 'create_profile_page' user.profile.id as create_url %} -->
+                          <a class="dropdown-item" href="{% url 'create_profile_page' %}">create Profile Page 0</a>
+                          
+                        {% endif %}
+                      </li>
+                      <li>
+                        {% if user.profile.id %}
+                          {% url 'show_profile_page' user.profile.id as show_url %}
+                          <a class="dropdown-item" href="{{ show_url }}">Show Profile Page</a>
+                        {% else %}
+                        
+                          <!-- {% url 'create_profile_page' user.profile.id as create_url %} -->
+                          <a class="dropdown-item" href="{% url 'create_profile_page' %}">Create Profile Page 1</a>
+                          
+                        {% endif %}
+                      </li>
                     </ul>
-                  </li>
 
                 
                 {% else %}
