@@ -1,9 +1,9 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, redirect, get_object_or_404
 from django.http import Http404, HttpResponseRedirect
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.views import View
-from .models import Post, Category
-from .forms import PostForm
+from .models import Post, Category, Comment
+from .forms import PostForm, CommentForm
 from django.urls import reverse_lazy, reverse
 
 def LikeView(request, pk):
@@ -82,6 +82,43 @@ class AddPostView(CreateView):
     template_name = 'add_post.html'
     #fields = '__all__'
     #fields = ('title', 'title_tag', 'body'  )
+
+class AddCommentView(CreateView):
+    model = Comment
+    form_class = CommentForm
+    template_name = 'add_comment.html'
+    success_url = reverse_lazy('frontpage')  # Change to your desired success URL
+
+    def form_valid(self, form):
+        form.instance.post_id = self.kwargs['pk']
+        return super().form_valid(form)
+
+# class AddCommentView(CreateView):
+#     model = Comment
+#     form_class = CommentForm
+#     template_name = 'add_comment.html'
+    
+#     def form_invalid(self, form):
+#         form.instance.post_id = self.kwargs['pk']
+
+#         return super().form_valid(form)
+
+#     success_url = reverse_lazy('frontpage')
+
+# class AddCommentView(View):
+#     def post(self, request, pk):
+#         post = get_object_or_404(Post, pk=pk)
+#         form = CommentForm(request.POST)
+#         if form.is_valid():
+#             comment = form.save(commit=False)
+#             comment.post = post
+#             comment.save()
+#             return redirect('article-detail', pk=post.pk)
+#         return redirect('article-detail', pk=post.pk)
+        
+#     def get(self, request, pk):
+#         return redirect('article-detail', pk=pk)
+
 
 class UpdatePostView(UpdateView):
     model = Post   

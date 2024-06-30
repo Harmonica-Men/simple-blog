@@ -19,15 +19,7 @@
     <hr>
     <br>
     {{ post.body|safe }}
-    <br>
-    <br>
-    <!-- <a href="{% url 'frontpage' %}" class="btn btn-secondary">BACK</a> -->
-
-
-
-
-
-    <br><br>
+    <br>    
     <hr>
     <br>
     <form action="{% url 'like_post' post.pk %}" method="POST">
@@ -52,9 +44,12 @@
     <hr>
 
     <h2>Comments .... </h2>
+    <a href="{% url 'add_comment' post.pk %}">Add Comment</a>
 
     {% if not post.comments.exists %}
-    No Comments yet <a href="#">Add Comment</a>
+    No Comments yet 
+    <!-- <a href="{% url 'add_comment' post.pk %}">Add Comment</a> -->
+  
     {% else %}
     {% for comment in post.comments.all %}
         <strong>{{ comment.name }} - {{ comment.date_added }}</strong>
@@ -63,6 +58,7 @@
     {% endfor %}
     {% endif %}
 
+  
 <br>
 <br>
 <hr>
