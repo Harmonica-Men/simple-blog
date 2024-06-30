@@ -10,12 +10,28 @@
 <br>
 <div class="from-group">
     <form method="POST">
+
         {% csrf_token %}
-        {{ form.as_p }}
+
+        <div class="from-group">
+            <label for="exampleInputEmail1" class="form-label">Email address</label>
+            <input type="text" class="form-control" name = "username" placeholder = "Username" id="InputEmail1" aria-describedby="emailHelp">
+            <!-- <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div> -->
+         </div>
+         <div class="from-group">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" class="form-control" name= "password" placeholder = "Password" id="exampleInputPassword1">
+
+         </div>
+<br>
+        <!-- {{ form.as_p }} -->
         <button class="btn btn-secondary">Update</button>
     </form>
 </div>
-<hr>
 <br>
+<div 
+    id="emailHelp" class="form-text">Not Registered? , Sign up <a href="{% url 'register' %}">Here</a>
+</div>
+
     
 {% endblock %}
