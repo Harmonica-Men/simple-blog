@@ -5,6 +5,8 @@ from django.views import View
 from .models import Post, Category, Comment
 from .forms import PostForm, CommentForm
 from django.urls import reverse_lazy, reverse
+from django.db.models import Q
+
 
 def LikeView(request, pk):
     post = get_object_or_404(Post, id=request.POST.get('post_id'))
@@ -93,32 +95,6 @@ class AddCommentView(CreateView):
         form.instance.post_id = self.kwargs['pk']
         return super().form_valid(form)
 
-# class AddCommentView(CreateView):
-#     model = Comment
-#     form_class = CommentForm
-#     template_name = 'add_comment.html'
-    
-#     def form_invalid(self, form):
-#         form.instance.post_id = self.kwargs['pk']
-
-#         return super().form_valid(form)
-
-#     success_url = reverse_lazy('frontpage')
-
-# class AddCommentView(View):
-#     def post(self, request, pk):
-#         post = get_object_or_404(Post, pk=pk)
-#         form = CommentForm(request.POST)
-#         if form.is_valid():
-#             comment = form.save(commit=False)
-#             comment.post = post
-#             comment.save()
-#             return redirect('article-detail', pk=post.pk)
-#         return redirect('article-detail', pk=post.pk)
-        
-#     def get(self, request, pk):
-#         return redirect('article-detail', pk=pk)
-
 
 class UpdatePostView(UpdateView):
     model = Post   
@@ -138,3 +114,17 @@ class AddCategoryView(CreateView):
     fields = '__all__'
     #fields = ('title', 'title_tag', 'body'  )
 
+
+class SearchView(View):
+    template_name = 'search.html'
+
+    def get(self, request):
+        query = request.GET.get('query', '')
+        posts = Post.objects.filter(status=Post.ACTIVE).filter(
+            Q(title__icontains=query) | Q(intro__icontains=query) | Q(body__icontains=query)
+        )
+        context = {
+            'posts': posts,
+            'query': query,
+        }
+        return render(request, self.template_name, context)

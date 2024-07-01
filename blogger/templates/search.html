@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block title %}Search | {% endblock %}
+
+{% block content %}
+    <h1>Search results</h1>
+    <h3>Query "{{ query }}"</h3>
+
+
+{% for post in posts %}
+
+    <a href="{% url 'article-detail' post.pk %}">
+        <div medium>
+            {{ post.created_at|timesince }} ago
+            {{ post.title }}
+        </div>
+        
+        <small>
+        {{ post.body|slice:":20" }}{% if post.body|length > 20 %}...{% endif %}
+        </small>
+<hr>
+        <!-- <p>{{ post.body }}</p> -->
+    </a>
+
+{% empty %}
+<small>
+    <p>No result for the given query...</p>
+</small>
+{% endfor %}
+
+{% endblock %}

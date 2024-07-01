@@ -1,5 +1,5 @@
 from django.urls import path, include
-from .views import FrontpageView, BlogPostDetailView, AddPostView, UpdatePostView, DeletePostView, AddCategoryView, CategoryView, CategoryListView, LikeView, AddCommentView
+from .views import FrontpageView, BlogPostDetailView, AddPostView, UpdatePostView, DeletePostView, AddCategoryView, CategoryView, CategoryListView, LikeView, AddCommentView, SearchView
 
 urlpatterns = [
     path('', FrontpageView.as_view(), name= 'frontpage'),
@@ -12,6 +12,8 @@ urlpatterns = [
     path('category_list/', CategoryListView, name='category-list'),
     path('like/<int:pk>', LikeView, name='like_post'),
     path('article/<int:pk>/comment/', AddCommentView.as_view(), name= 'add_comment'),    
+    path('search/', SearchView.as_view(), name='search'),
+
 
     # path('<int:pk>/', include('members.urls')),
 ]
