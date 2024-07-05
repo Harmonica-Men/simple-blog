@@ -55,7 +55,7 @@ This site was deployed to and is currently [hosted on the Heroku platform](https
 
 #### Create a new PostgreSQL Code Institute database.
 
-From codeinstitute every student can maintain up to eight databases to run there projects. Here is a step by step guide to install PostgreSQL from Code Institurte to the clould!
+From codeinstitute every student can maintain up to eight databases to run there projects. Here is a step by step guide to install PostgreSQL from Code Institute to the clould!
 
   1. Navigate to [PostgreSQL from Code Institute](https://dbs.ci-dbs.net//) and log in with your LMS account
   ![PostgreSQL database creation step1](static/images/readme-images/001.png)
@@ -74,7 +74,7 @@ From codeinstitute every student can maintain up to eight databases to run there
   First you go to the Heroku website and login whit your credentials. 
   
   Part 1 - Create the Heroku app:
-  1. Navigate to your Heroku dashboard and create a new app with a unique name in a region close to you.
+  1. Navigate to your Heroku dashboard and create a new app with a unique name in a GPDR region Europe 
   Note: No Django static file collection will be required during the build.
   2. In your new app’s settings tab, ensure the Config Var **DISABLE_COLLECTSTATIC** key has a value of **1**.
 
@@ -119,6 +119,8 @@ Part 3 - Deploy to Heroku:
   In your new app’s resources tab, ensure you are using an eco dyno and delete any Postgres database Add-on.
   2. Click **Open app** buttin o see your deployed app. If everythings goes well you on the frontpage of myblog.
 
+  Note: The build must be complete before you can open the app.
+  Note: You will see an error that the current path didn’t match any of the URL patterns as you have not written the urlpattern yet.
 
 
 
