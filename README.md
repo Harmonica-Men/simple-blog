@@ -69,66 +69,64 @@ From codeinstitute every student can maintain up to eight databases to run there
   4. Do note these databases are limted in time and have a life time of operation of 18 months after the date of creation.
   ![PostgreSQL database creation step3](static/images/readme-images/004.png)
  
-#### Django Project Settings
-  7. In the project workspace, navigate to/create a file named 'Procfile' (remember the capital 'P')
-  8. Add the following code replacing ```<myapp>``` with the actual app name then save the file:
-      ``` python
-      web: gunicorn <myapp>.wsgi
-      ```
-  9. Now navigate to/create a file named 'env.py'
-  10. Add the following code, replacing ```<myurl>``` with the URL just copied from ElephantSQL and ```<mykey>``` with a string of your choice then save the file:
-      ``` python
-      import os
+#### Deploy the project challenge
+  In the previous topic, I have created a PostgreSQL database. In this topic, you are challenged to deploy your project to Heroku.
+  First you go to the Heroku website and login whit your credentials. 
+  
+  Part 1 - Create the Heroku app:
+  1. Navigate to your Heroku dashboard and create a new app with a unique name in a region close to you.
+  Note: No Django static file collection will be required during the build.
+  2. In your new app’s settings tab, ensure the Config Var **DISABLE_COLLECTSTATIC** key has a value of **1**.
 
-      os.environ["DATABASE_URL"]=<myurl>
-      os.environ["SECRET_KEY"]=<mykey>
-      ```
-  11. Open 'settings.py' and add the following near the top of the code:
-      ```python
-      import os
-      import dj_database_url
-      if os.path.isfile('env.py'):
-        import env
-      ```
-  12. Further down the page, replace any current instance of the SECRET_KEY variable with:
-      ``` python
-      SECRET_KEY = os.environ.get('SECRET_KEY')
-      ```
-  13. Replace the DATABASES variable with
-      ```python
-      DATABASES = {
-        'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
-        }
-      ```
-  14. Save the file then run ```python manage.py migrate``` in the terminal
-  15. Commit and push these changes to the repository
+  Part 2 - Update your code for deployment:
 
-#### Heroku Setup
-  16. Navigate to [Heroku](https://heroku.com) and create an account/log in
-  17. Click 'New' in the top right and select 'Create New App'
-  18. Enter an App name (must be unique), choose a region, and then click 'Create app'
-  19. Select 'Settings' in the menubar
-  20. Click 'Reveal Config Vars' and add the following:<br>
-    - DATABASE_URL: the DATABASE_URL copied from ElephantSQL<br>
-    - SECRET_KEY: The SECRET_KEY string you created<br>
-    - PORT: 8000
-  21. Click 'Deploy' in the menubar tab then 'GitHub' under 'Deployment method'
-  22. Select the repository you want to deploy and click 'Connect'
-  23. Scroll down and click 'Deploy Branch' to complete the process
+  1. Use **pip3** to install ```gunicorn~=20.1``` and **freeze** it to the **requirements.txt** file.
+  The commands at the terminal are:
 
-### Forking the Repository
-1. Login to/create your [GitHub](https://github.com) account
-2. Navigate to the EastSt. GitHub Repository: https://github.com/ndsurgenor/east-street
-3. Towards the top right, under the main banner, click 'Fork'
-4. Adjust the form fields if desired, then click 'Create fork' to finish
+    pip3 install gunicorn~=20.1 
+    pip3 freeze --local > requirements.txt
 
-### Cloning the Repository/Running Locally
-1. Login to/create your [GitHub](https://github.com) account
-2. Navigate to the EastSt. GitHub Repository: https://github.com/ndsurgenor/east-street
-3. Click the '<> Code' dropdown button and ensure 'HTTPS' is selected
-4. Click the copy icon (two overlapped squares) beside the repository URL
-5. Open your local IDE and create a new project, ensuring git is installed
-6. Run ```git clone copied-git-url``` in the terminal to finish
+  2. In the **Procfile**, add a command using **gunicorn** and **myblog wsgi** file to start the webserver.
+
+  3. In the **myblog/settings.py** file, set the **DEBUG** constant to False and append the **'.herokuapp.com'** hostname to the **ALLOWED_HOSTS** list. 
+  
+    web: gunicorn myblog.wsgi
+
+  **Note:** There is a space after the colon.
+  **Note:** The Procfile has no file extension.
+
+  **Top tip!** It's a good habit to always set **DEBUG** to **False** before any deployment. Once you have completed deployment, you can set it back to True locally to continue development.
+  **Double check**
+    Have you changed DEBUG to False and added , **'.herokuapp.com'** to the **ALLOWED_HOSTS**?
+      
+      DEBUG = False
+      ,'.herokuapp.com'
+  
+
+  4. Git add, commit and push the code to your GitHub repo.
+
+    git add .
+    git commit -m "readies code for deploy"
+    git push origin main
+
+
+Part 3 - Deploy to Heroku:
+
+  1. In your new app’s **Deploy** tab, search for your GitHub repo and connect it to the Heroku app. Manually deploy the **main** branch of this GitHub repo.
+  **Note:** Start typing your project repo name into the search box and click on the GitHub repo you want to deploy from.
+  After manually deploying the main branch, you can view the build output in the application’s **Activity** tab in the dashboard.
+
+  In your new app’s resources tab, ensure you are using an eco dyno and delete any Postgres database Add-on.
+  2. Click **Open app** buttin o see your deployed app. If everythings goes well you on the frontpage of myblog.
+
+
+
+
+
+
+
+
+
 
 
 ## Credits
