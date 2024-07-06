@@ -1,52 +1,292 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# AstroShare Blo
 
-Simple - Blog / Mockup plaatje / Live Link
+"Discover the cosmos with AstroShare, the ultimate online community for astronomy enthusiasts! Our blog is a hub where you can sign up, collaborate, and interact with fellow stargazers. Share stunning photos, insightful articles, and engaging discussions about all things astronomical. Whether you're a novice star-watcher or a seasoned astronomer, AstroShare makes it easy to connect, learn, and grow. Join us today and be a part of a vibrant community that’s exploring the universe, one post at a time!"
 
-Table of contents
+A live version of the project can be accessed here: 
 
-- [UX](#ux)
+(responsiveness image)
 
-  - [Agile User Stories/Epics/Milestones](#agile-user-stories)
-  - [Site Goals](#site-goals)
-  - [Wireframes](#wireframes)
-  - [Images](#images)
-  - [Logo](#logo)
-  - [Favicon](favicon)
-  - [Colour Scheme](colour-scheme)
-  - [Fonts](fonts)
-  - [Databases](databases)
-  - [Features](Features)
-  - [Bugs](bugs)
-  - [Testing](testing)
-  - [Deployment](deployment)
-  - [Credits](credits)
 
-# UX
+# Table Of Contents
+  - [AstroShare Blog](#astro-blog)
+  
+  - User Experience Design
+    - [User Experience (UX)](#ux)    
+    #### The UX Table of Contents
+      1. [Welcome and Introduction](#1-welcome-and-introduction)
+      2. [Sign-Up Process](#2-sign-up-process)
+      3. [Navigation and Exploration](#3-navigation-and-exploration)
+      4. [Creating and Sharing Content](#4-creating-and-sharing-content)
+      5. [Interaction and Collaboration](#5-interaction-and-collaboration)
+      6. [Profile and Community Building](#6-profile-and-community-building)
+      7. [Ease of Use and Accessibility](#7-ease-of-use-and-accessibility)
+      8. [Continuous Engagement](#8-continuous-engagement)
+      9. [Conclusion](#9-conclusion)
+    #### User Demographic Table of Contents      
+      1. [Age Group](#1-age-group)
+      2. [Interest](#2-interest)
+      3. [Education Level](#3-education-level)
+      4. [Technological Proficiency](#4-technological-proficiency)
+      5. [Geographic Location](#5-geographic-location)
+      6. [Behavioral Traits](#6-behavioral-traits)
+      7. [Accessibility Needs](#7-accessibility-needs)
+      
+    #### User Stories 
+      1. [Welcome and Introduction](#welcome-and-introduction)
+      2. [Sign-Up Process](#sign-up-process)
+      3. [Navigation and Exploration](#navigation-and-exploration)
+      4. [Creating and Sharing Content](#creating-and-sharing-content)
+      5. [Interaction and Collaboration](#interaction-and-collaboration)
+      6. [Profile and Community Building](#profile-and-community-building)
+      7. [Ease of Use and Accessibility](#ease-of-use-and-accessibility)
+      8. [Continuous Engagement](#continuous-engagement)
 
-## Agile User Stories/Epics/Milestone
+    - Flowchart
+    - Entity Relationship Diagram
 
-## Site Goals
+  # UX  
+  ## 1. Welcome and Introduction
+  **User opens the blog website:**
 
-Lorem ipsum dolor sit amet. Sed galisum praesentium est quia voluptatum ut quaerat voluptatem qui quod eligendi et obcaecati illum. Qui enim quia qui laboriosam incidunt aut natus doloremque ut eveniet nihil! Et consequatur quam aut tenetur adipisci ea illum voluptatum hic deserunt consequuntur est obcaecati dolorum aut optio cupiditate et alias nobis.
+  - **Landing Page:**
+    - A visually appealing landing page with a background image of the night sky or a space theme.
+    - A welcoming headline: "Welcome to AstroShare - Your Space for Astronomical Insights and Community".
+    - Brief introduction: "Join our community of astronomy enthusiasts, share your insights, post photos, and engage in enlightening discussions."
 
-A dolore praesentium ea officia sequi est quos soluta ea magni veniam? Aut doloribus commodi qui tempore officia et totam temporibus quo quod error sed beatae eligendi et nihil rerum.
+  - **Call to Action:**
+    - Prominent "Sign Up" and "Log In" buttons.
+    - Short introductory video or animation showcasing the features of the blog.
 
-## User Stories
+  [Back to top](#the-ux-table-of-contents)
 
-As a user I want:
+  ## 2. Sign-Up Process
+  **User clicks on "Sign Up":**
 
-- Lorem ipsum dolor sit amet. Sit quibusdam voluptates vel iusto dolorem qui aliquid Quis a incidunt explicabo ab neque dolorum sed libero.
-- Vel laudantium praesentium aut provident laudantium et ducimus dolor ea magni similique.
-- To be able to set a Cipher-Key, this is a handy feature to add a extra level of complexity to obscure your passwords.
-- To set up a default user login, makes the UX more user friendly.
-- To always be able to change the 'master password' to access the password-manager.
-- **note** There was a **copy/paste** password clipboard feature available but that I need to removed because it was not possible to integrate that
-  in Heroku cloud environment.
+  - **Sign-Up Form:**
+    - Simple form requesting essential information: Username, Email, Password, and Confirm Password.
+    - Option to sign up using social media accounts (Google, Facebook).
 
-As the administrator I want:
+  - **Profile Setup:**
+    - After signing up, the user is prompted to complete their profile:
+      - Upload a profile picture.
+      - Write a short bio.
+      - Add links to personal websites or social media profiles (optional).
 
--  Est odio quia At repellat velit ut corporis quae ut consequatur fugiat non magnam libero id odit iste est voluptatibus libero.
-- Quis a incidunt explicabo ab neque dolorum sed libero
+  [Back to top](#the-ux-table-of-contents)
+
+  ## 3. Navigation and Exploration
+  **User completes sign-up and is directed to the main dashboard:**
+
+  - **Main Dashboard:**
+    - Personalized greeting: "Hello, [Username]! Welcome to AstroShare."
+    - Easy-to-navigate menu with options: Home, Explore, Create Post, My Profile, Notifications, Settings, and Log Out.
+
+  - **Home Feed:**
+    - A feed of the latest posts from users, featuring photos, articles, and discussions about various astronomical topics.
+    - Each post includes the author’s profile picture, name, post title, content preview, and interaction buttons (Like, Comment, Share).
+
+  [Back to top](#the-ux-table-of-contents)
+
+  ## 4. Creating and Sharing Content
+  **User clicks on "Create Post":**
+
+  - **Create Post Page:**
+    - Simple and intuitive editor for creating posts:
+      - Title field.
+      - Content field with rich text formatting options.
+      - Option to add photos (drag and drop or upload from device).
+      - Tags field for categorizing the post (e.g., Planets, Stars, Telescopes, Space Missions).
+    - "Post" button to publish the content.
+
+  [Back to top](#the-ux-table-of-contents)
+
+  ## 5. Interaction and Collaboration
+  **User interacts with a post:**
+
+  - **Commenting:**
+    - Users can leave comments on posts.
+    - Comment section with a clear text field, and an "Add Comment" button.
+    - Ability to reply to comments and like/dislike comments.
+
+  - **Collaborative Features:**
+    - Option to invite other users to collaborate on a post.
+    - Real-time collaboration with a shared editor for multiple contributors.
+
+  - **Notifications:**
+    - Users receive notifications for new comments, likes, and collaboration invites.
+    - Notification bell icon in the menu bar with a dropdown list of recent notifications.
+
+  [Back to top](#the-ux-table-of-contents)
+
+  ## 6. Profile and Community Building
+  **User explores their profile and connects with others:**
+
+  - **User Profile:**
+    - Profile page displaying user information: profile picture, bio, posts, and activity.
+    - Edit Profile button for updating information and settings.
+
+  - **Community Engagement:**
+    - Explore page with user search functionality.
+    - Follow other users to receive updates on their posts and activities.
+    - Direct messaging feature for private conversations.
+
+  [Back to top](#the-ux-table-of-contents)
+
+  ## 7. Ease of Use and Accessibility
+  **User enjoys a seamless experience:**
+
+  - **Responsive Design:**
+    - Blog is fully responsive and works seamlessly on desktop, tablet, and mobile devices.
+    - Fast loading times and smooth transitions between pages.
+
+  - **Accessibility:**
+    - High contrast mode and text resizing options for visually impaired users.
+    - Keyboard navigable interface and screen reader compatibility.
+
+  - **Help and Support:**
+    - Easily accessible help section with FAQs and tutorials.
+    - Contact support option for direct assistance.
+
+  [Back to top](#the-ux-table-of-contents)
+
+  ## 8. Continuous Engagement
+  **User stays engaged and returns to the blog:**
+
+  - **Content Recommendations:**
+    - Personalized content recommendations based on user’s interests and activity.
+    - Regular email updates with highlights from the blog and upcoming astronomical events.
+
+  - **Events and Challenges:**
+    - Community events such as virtual star-gazing sessions, photo contests, and Q&A sessions with astronomy experts.
+    - Interactive challenges and quizzes to keep users engaged and learning.
+
+  [Back to top](#the-ux-table-of-contents)
+
+  ## 9. Conclusion
+  AstroShare offers a user-friendly, engaging, and collaborative platform for astronomy enthusiasts to share knowledge, interact with the community, and enjoy a seamless and enriching experience.
+
+  [Back to top](#the-ux-table-of-contents)
+
+
+  ## User Demographic for Astronomy Blog
+  ## 1. Age Group
+  - Primarily adults and young adults (18-45 years old) who have a keen interest in astronomy and space exploration.
+  - This demographic is likely to be tech-savvy and comfortable using digital platforms for both learning and social interaction.
+
+  [Back to top](#table-of-contents)
+
+  ## 2. Interest
+  - Individuals who are passionate about astronomy, including amateur astronomers, space enthusiasts, students studying astronomy or related sciences, and professionals working in the field.
+
+  [Back to top](#table-of-contents)
+
+  ## 3. Education Level
+  - Varied, but likely to include individuals with at least a high school education and a strong interest in science, particularly astronomy and space sciences.
+  - Some users may have advanced degrees or be pursuing careers in astronomy or related fields.
+
+  [Back to top](#table-of-contents)
+
+  ## 4. Technological Proficiency
+  - Users who are comfortable with technology, including social media platforms, online communities, and content creation tools.
+  - They are likely to engage actively in online discussions, share content, and collaborate with others on the platform.
+
+  [Back to top](#table-of-contents)
+
+  ## 5. Geographic Location
+  - The platform may attract users globally, given the universal interest in astronomy.
+  - However, regions with active amateur astronomy communities, space research institutes, or strong educational programs in astronomy may have a higher concentration of users.
+
+  [Back to top](#table-of-contents)
+
+  ## 6. Behavioral Traits
+  - Users who enjoy sharing knowledge, participating in discussions, and engaging with multimedia content such as photos and videos related to astronomy.
+  - They may also value community building, collaborative projects, and staying updated with the latest astronomical discoveries and events.
+
+  [Back to top](#table-of-contents)
+
+  ## 7. Accessibility Needs
+  - While primarily targeting users comfortable with digital platforms, efforts should be made to ensure accessibility features such as high contrast mode, text resizing, and screen reader compatibility to accommodate users with visual impairments or disabilities.
+
+  [Back to top](#table-of-contents)
+
+
+  ## User Stories 
+  ## Welcome and Introduction
+  **As a user:**
+  - I want to see a visually appealing landing page with a space theme and a welcoming headline.
+  - I want to read a brief introduction about the community and its features.
+  - I want to have prominent "Sign Up" and "Log In" buttons to easily join or access the blog.
+  - I want to watch a short introductory video or animation showcasing the blog's features.
+
+  [Back to top](#table-of-contents)
+
+  ## Sign-Up Process
+  **As a user:**
+  - I want to click on "Sign Up" and fill out a simple form with my Username, Email, Password, and Confirm Password.
+  - I want to have the option to sign up using my social media accounts (Google, Facebook).
+  - I want to be prompted to complete my profile by uploading a profile picture, writing a short bio, and optionally adding links to personal websites or social media profiles after signing up.
+
+  [Back to top](#table-of-contents)
+
+  ## Navigation and Exploration
+  **As a user:**
+  - I want to be directed to the main dashboard with a personalized greeting after completing the sign-up.
+  - I want an easy-to-navigate menu with options like Home, Explore, Create Post, My Profile, Notifications, Settings, and Log Out.
+  - I want to see a home feed with the latest posts from users, including photos, articles, and discussions about various astronomical topics.
+  - I want each post to include the author’s profile picture, name, post title, content preview, and interaction buttons (Like, Comment, Share).
+
+  [Back to top](#table-of-contents)
+
+  ## Creating and Sharing Content
+  **As a user:**
+  - I want to click on "Create Post" and access a simple and intuitive editor.
+  - I want to have a title field, content field with rich text formatting options, and the ability to add photos either by dragging and dropping or uploading from my device.
+  - I want to add tags to categorize my post and a "Post" button to publish my content.
+
+  [Back to top](#table-of-contents)
+
+  ## Interaction and Collaboration
+  **As a user:**
+  - I want to leave comments on posts with a clear text field and an "Add Comment" button.
+  - I want to be able to reply to comments and like or dislike them.
+  - I want to invite other users to collaborate on a post.
+  - I want real-time collaboration with a shared editor for multiple contributors.
+  - I want to receive notifications for new comments, likes, and collaboration invites, with a notification bell icon in the menu bar showing a dropdown list of recent notifications.
+
+  [Back to top](#table-of-contents)
+
+  ## Profile and Community Building
+  **As a user:**
+  - I want to explore my profile page that displays my information, including my profile picture, bio, posts, and activity.
+  - I want an "Edit Profile" button to update my information and settings.
+  - I want to use the Explore page to search for other users.
+  - I want to follow other users to receive updates on their posts and activities.
+  - I want to use a direct messaging feature for private conversations.
+
+  [Back to top](#table-of-contents)
+
+  ## Ease of Use and Accessibility
+  **As a user:**
+  - I want the blog to be fully responsive and work seamlessly on desktop, tablet, and mobile devices.
+  - I want fast loading times and smooth transitions between pages.
+  - I want high contrast mode and text resizing options for better accessibility if I am visually impaired.
+  - I want a keyboard navigable interface and screen reader compatibility.
+  - I want an easily accessible help section with FAQs and tutorials, along with a contact support option for direct assistance.
+
+  [Back to top](#table-of-contents)
+
+  ## Continuous Engagement
+  **As a user:**
+  - I want personalized content recommendations based on my interests and activity.
+  - I want regular email updates with highlights from the blog and information about upcoming astronomical events.
+  - I want to participate in community events such as virtual star-gazing sessions, photo contests, and Q&A sessions with astronomy experts.
+  - I want to engage in interactive challenges and quizzes to keep learning and stay engaged with the blog.
+
+  [Back to top](#table-of-contents)
+
+
+
+
 
 ## Deployment
 
@@ -55,7 +295,7 @@ This site was deployed to and is currently [hosted on the Heroku platform](https
 
 #### Create a new PostgreSQL Code Institute database.
 
-From codeinstitute every student can maintain up to eight databases to run there projects. Here is a step by step guide to install PostgreSQL from Code Institute to the clould!
+From codeinstitute every student can maintain up to eight databases to run there projects. Here is a step by step guide to install PostgreSQL from Code Institute to the cloud!
 
   1. Navigate to [PostgreSQL from Code Institute](https://dbs.ci-dbs.net//) and log in with your LMS account
   ![PostgreSQL database creation step1](static/images/readme-images/001.png)
@@ -66,17 +306,30 @@ From codeinstitute every student can maintain up to eight databases to run there
   3. You now have a brand new PostgreSQL Code Institute database
   The link to this database and how to manage all your other databases will be send my email. 
   ![PostgreSQL database creation step3](static/images/readme-images/003.png)
-  4. Do note these databases are limted in time and have a life time of operation of 18 months after the date of creation.
-  ![PostgreSQL database creation step3](static/images/readme-images/004.png)
+  4. Do note these databases are limited in time and have a life time of operation of 18 months after the date of creation.
+  ![PostgreSQL database creation step4](static/images/readme-images/004.png)
  
-#### Deploy the project challenge
+#### Deploy the project 
   In the previous topic, I have created a PostgreSQL database. In this topic, you are challenged to deploy your project to Heroku.
   First you go to the Heroku website and login whit your credentials. 
+
+  0. Set up your Heroku account 
+  ...
+
+
+
   
   Part 1 - Create the Heroku app:
-  1. Navigate to your Heroku dashboard and create a new app with a unique name in a GPDR region Europe 
+  1. Navigate to your Heroku dashboard and create a new app with a unique name in a GDPR region Europe 
   Note: No Django static file collection will be required during the build.
-  2. In your new app’s settings tab, ensure the Config Var **DISABLE_COLLECTSTATIC** key has a value of **1**.
+  2. In your new app’s settings tab, ensure the **Config Vars** click on **Reveal Config Vars** button to define new variables in the inputs fields: 
+    
+    "DATABASE_URL", "<your-database-URL>"
+
+    "SECRET_KEY", "<secret-key>"
+
+    "CLOUDINARY_URL", "<cloudinary-URL>"
+
 
   Part 2 - Update your code for deployment:
 
@@ -101,8 +354,7 @@ From codeinstitute every student can maintain up to eight databases to run there
       
       DEBUG = False
       ,'.herokuapp.com'
-  
-
+    
   4. Git add, commit and push the code to your GitHub repo.
 
     git add .
@@ -112,19 +364,25 @@ From codeinstitute every student can maintain up to eight databases to run there
 
 Part 3 - Deploy to Heroku:
 
-  1. In your new app’s **Deploy** tab, search for your GitHub repo and connect it to the Heroku app. Manually deploy the **main** branch of this GitHub repo.
+  1. In your new app’s **Deploy** tab, search for your GitHub repo and connect it to the Heroku app. Manually deploy the **main** branch of this GitHub repo is also the prefered method.
   **Note:** Start typing your project repo name into the search box and click on the GitHub repo you want to deploy from.
   After manually deploying the main branch, you can view the build output in the application’s **Activity** tab in the dashboard.
 
   In your new app’s resources tab, ensure you are using an eco dyno and delete any Postgres database Add-on.
-  2. Click **Open app** buttin o see your deployed app. If everythings goes well you on the frontpage of myblog.
 
-  Note: The build must be complete before you can open the app.
-  Note: You will see an error that the current path didn’t match any of the URL patterns as you have not written the urlpattern yet.
+  2. Click **Open app** buttin to see your deployed app. 
+  If everythings goes well you on the frontpage of myblog.
 
+  **Note:** The build must be complete before you can open the app.
 
+import os
 
-
+os.environ.setdefault(
+    "DATABASE_URL", "<your-database-URL>")
+os.environ.setdefault(
+    "SECRET_KEY", "(j(j_+@%s$a955-5gw=m@b-%#$slmv$0aixrck&odnq*h+ig@0")
+os.environ.setdefault(
+    "CLOUDINARY_URL", "<cloudinary-URL>")
 
 
 
