@@ -15,7 +15,7 @@ A live version of the project can be accessed here:
     - [User Demographic](#user-demographic-table-of-contents)
     - [User Stories](#user-stories-table-of-contents)
     - [Flowchart](#flowchart)
-    - Entity Relationship Diagram
+    - [Entity Relationship Diagram](#entity-relationship-diagram)
 
   # UX  
   #### The UX Table of Contents
@@ -291,7 +291,7 @@ A live version of the project can be accessed here:
 
   ![Flow Chart](static/images/readme-images/006_flowchart.jpg)
 
-  ## Entity Relationship Diagram!
+  ## Entity Relationship Diagram
   
   ![ERD](static/images/readme-images/005_ERD_diagram.jpg)
 
