@@ -1,4 +1,4 @@
-# AstroShare Blo
+# AstroShare Blog
 
 "Discover the cosmos with AstroShare, the ultimate online community for astronomy enthusiasts! Our blog is a hub where you can sign up, collaborate, and interact with fellow stargazers. Share stunning photos, insightful articles, and engaging discussions about all things astronomical. Whether you're a novice star-watcher or a seasoned astronomer, AstroShare makes it easy to connect, learn, and grow. Join us today and be a part of a vibrant community that’s exploring the universe, one post at a time!"
 
@@ -8,43 +8,26 @@ A live version of the project can be accessed here:
 
 
 # Table Of Contents
-  - [AstroShare Blog](#astro-blog)
+  - [AstroShare Blog](#astroshare-blog)
   
   - User Experience Design
     - [User Experience (UX)](#ux)    
-    #### The UX Table of Contents
-      1. [Welcome and Introduction](#1-welcome-and-introduction)
-      2. [Sign-Up Process](#2-sign-up-process)
-      3. [Navigation and Exploration](#3-navigation-and-exploration)
-      4. [Creating and Sharing Content](#4-creating-and-sharing-content)
-      5. [Interaction and Collaboration](#5-interaction-and-collaboration)
-      6. [Profile and Community Building](#6-profile-and-community-building)
-      7. [Ease of Use and Accessibility](#7-ease-of-use-and-accessibility)
-      8. [Continuous Engagement](#8-continuous-engagement)
-      9. [Conclusion](#9-conclusion)
-    #### User Demographic Table of Contents      
-      1. [Age Group](#1-age-group)
-      2. [Interest](#2-interest)
-      3. [Education Level](#3-education-level)
-      4. [Technological Proficiency](#4-technological-proficiency)
-      5. [Geographic Location](#5-geographic-location)
-      6. [Behavioral Traits](#6-behavioral-traits)
-      7. [Accessibility Needs](#7-accessibility-needs)
-      
-    #### User Stories 
-      1. [Welcome and Introduction](#welcome-and-introduction)
-      2. [Sign-Up Process](#sign-up-process)
-      3. [Navigation and Exploration](#navigation-and-exploration)
-      4. [Creating and Sharing Content](#creating-and-sharing-content)
-      5. [Interaction and Collaboration](#interaction-and-collaboration)
-      6. [Profile and Community Building](#profile-and-community-building)
-      7. [Ease of Use and Accessibility](#ease-of-use-and-accessibility)
-      8. [Continuous Engagement](#continuous-engagement)
-
-    - Flowchart
+    - [User Demographic](#user-demographic-table-of-contents)
+    - [User Stories](#user-stories-table-of-contents)
+    - [Flowchart](#flowchart)
     - Entity Relationship Diagram
 
   # UX  
+  #### The UX Table of Contents
+  1. [Welcome and Introduction](#1-welcome-and-introduction)
+  2. [Sign-Up Process](#2-sign-up-process)
+  3. [Navigation and Exploration](#3-navigation-and-exploration)
+  4. [Creating and Sharing Content](#4-creating-and-sharing-content)
+  5. [Interaction and Collaboration](#5-interaction-and-collaboration)
+  6. [Profile and Community Building](#6-profile-and-community-building)
+  7. [Ease of Use and Accessibility](#7-ease-of-use-and-accessibility)
+  8. [Continuous Engagement](#8-continuous-engagement)
+  9. [Conclusion](#9-conclusion)
   ## 1. Welcome and Introduction
   **User opens the blog website:**
 
@@ -57,7 +40,10 @@ A live version of the project can be accessed here:
     - Prominent "Sign Up" and "Log In" buttons.
     - Short introductory video or animation showcasing the features of the blog.
 
-  [Back to top](#the-ux-table-of-contents)
+  [Back to UX Table of Contents](#the-ux-table-of-contents)
+
+  [Back to Top](#astroshare-blog)
+
 
   ## 2. Sign-Up Process
   **User clicks on "Sign Up":**
@@ -72,7 +58,10 @@ A live version of the project can be accessed here:
       - Write a short bio.
       - Add links to personal websites or social media profiles (optional).
 
-  [Back to top](#the-ux-table-of-contents)
+  [Back to UX Table of Contents](#the-ux-table-of-contents)
+  
+  [Back to Top](#astroshare-blog)
+
 
   ## 3. Navigation and Exploration
   **User completes sign-up and is directed to the main dashboard:**
@@ -85,7 +74,9 @@ A live version of the project can be accessed here:
     - A feed of the latest posts from users, featuring photos, articles, and discussions about various astronomical topics.
     - Each post includes the author’s profile picture, name, post title, content preview, and interaction buttons (Like, Comment, Share).
 
-  [Back to top](#the-ux-table-of-contents)
+  [Back to UX Table of Contents](#the-ux-table-of-contents)
+
+  [Back to Top](#astroshare-blog)
 
   ## 4. Creating and Sharing Content
   **User clicks on "Create Post":**
@@ -98,7 +89,9 @@ A live version of the project can be accessed here:
       - Tags field for categorizing the post (e.g., Planets, Stars, Telescopes, Space Missions).
     - "Post" button to publish the content.
 
-  [Back to top](#the-ux-table-of-contents)
+  [Back to UX Table of Contents](#the-ux-table-of-contents)
+
+  [Back to Top](#astroshare-blog)
 
   ## 5. Interaction and Collaboration
   **User interacts with a post:**
@@ -116,7 +109,9 @@ A live version of the project can be accessed here:
     - Users receive notifications for new comments, likes, and collaboration invites.
     - Notification bell icon in the menu bar with a dropdown list of recent notifications.
 
-  [Back to top](#the-ux-table-of-contents)
+  [Back to UX Table of Contents](#the-ux-table-of-contents)
+
+  [Back to Top](#astroshare-blog)
 
   ## 6. Profile and Community Building
   **User explores their profile and connects with others:**
@@ -130,7 +125,9 @@ A live version of the project can be accessed here:
     - Follow other users to receive updates on their posts and activities.
     - Direct messaging feature for private conversations.
 
-  [Back to top](#the-ux-table-of-contents)
+  [Back to UX Table of Contents](#the-ux-table-of-contents)
+
+  [Back to Top](#astroshare-blog)
 
   ## 7. Ease of Use and Accessibility
   **User enjoys a seamless experience:**
@@ -147,7 +144,9 @@ A live version of the project can be accessed here:
     - Easily accessible help section with FAQs and tutorials.
     - Contact support option for direct assistance.
 
-  [Back to top](#the-ux-table-of-contents)
+  [Back to UX Table of Contents](#the-ux-table-of-contents)
+
+  [Back to Top](#astroshare-blog)
 
   ## 8. Continuous Engagement
   **User stays engaged and returns to the blog:**
@@ -160,57 +159,90 @@ A live version of the project can be accessed here:
     - Community events such as virtual star-gazing sessions, photo contests, and Q&A sessions with astronomy experts.
     - Interactive challenges and quizzes to keep users engaged and learning.
 
-  [Back to top](#the-ux-table-of-contents)
+  [Back to UX Table of Contents](#the-ux-table-of-contents)
+
+  [Back to Top](#astroshare-blog)
 
   ## 9. Conclusion
   AstroShare offers a user-friendly, engaging, and collaborative platform for astronomy enthusiasts to share knowledge, interact with the community, and enjoy a seamless and enriching experience.
 
-  [Back to top](#the-ux-table-of-contents)
+  [Back to UX Table of Contents](#the-ux-table-of-contents)
 
+  [Back to Top](#astroshare-blog)
 
-  ## User Demographic for Astronomy Blog
+  ## User Demographic Table of Contents
+  1. [Age Group](#1-age-group)
+  2. [Interest](#2-interest)
+  3. [Education Level](#3-education-level)
+  4. [Technological Proficiency](#4-technological-proficiency)
+  5. [Geographic Location](#5-geographic-location)
+  6. [Behavioral Traits](#6-behavioral-traits)
+  7. [Accessibility Needs](#7-accessibility-needs)
+  
   ## 1. Age Group
   - Primarily adults and young adults (18-45 years old) who have a keen interest in astronomy and space exploration.
   - This demographic is likely to be tech-savvy and comfortable using digital platforms for both learning and social interaction.
 
-  [Back to top](#table-of-contents)
+  [Back to User Demographic Table of Contents](#user-demographic-table-of-contents)
+
+  [Back to Top](#astroshare-blog)
 
   ## 2. Interest
   - Individuals who are passionate about astronomy, including amateur astronomers, space enthusiasts, students studying astronomy or related sciences, and professionals working in the field.
 
-  [Back to top](#table-of-contents)
+  [Back to User Demographic Table of Contents](#user-demographic-table-of-contents)
+
+  [Back to Top](#astroshare-blog)
 
   ## 3. Education Level
   - Varied, but likely to include individuals with at least a high school education and a strong interest in science, particularly astronomy and space sciences.
   - Some users may have advanced degrees or be pursuing careers in astronomy or related fields.
 
-  [Back to top](#table-of-contents)
+  [Back to User Demographic Table of Contents](#user-demographic-table-of-contents)
+
+  [Back to Top](#astroshare-blog)
 
   ## 4. Technological Proficiency
   - Users who are comfortable with technology, including social media platforms, online communities, and content creation tools.
   - They are likely to engage actively in online discussions, share content, and collaborate with others on the platform.
 
-  [Back to top](#table-of-contents)
+  [Back to User Demographic Table of Contents](#user-demographic-table-of-contents)
+
+  [Back to Top](#astroshare-blog)
 
   ## 5. Geographic Location
   - The platform may attract users globally, given the universal interest in astronomy.
   - However, regions with active amateur astronomy communities, space research institutes, or strong educational programs in astronomy may have a higher concentration of users.
 
-  [Back to top](#table-of-contents)
+  [Back to User Demographic Table of Contents](#user-demographic-table-of-contents)
+
+  [Back to Top](#astroshare-blog)
 
   ## 6. Behavioral Traits
   - Users who enjoy sharing knowledge, participating in discussions, and engaging with multimedia content such as photos and videos related to astronomy.
   - They may also value community building, collaborative projects, and staying updated with the latest astronomical discoveries and events.
 
-  [Back to top](#table-of-contents)
+  [Back to User Demographic Table of Contents](#user-demographic-table-of-contents)
+
+  [Back to Top](#astroshare-blog)
 
   ## 7. Accessibility Needs
   - While primarily targeting users comfortable with digital platforms, efforts should be made to ensure accessibility features such as high contrast mode, text resizing, and screen reader compatibility to accommodate users with visual impairments or disabilities.
 
-  [Back to top](#table-of-contents)
+  [Back to User Demographic Table of Contents](#user-demographic-table-of-contents)
 
+  [Back to Top](#astroshare-blog)
 
-  ## User Stories 
+## User Stories Table of Contents
+  1. [Welcome and Introduction](#welcome-and-introduction)
+  2. [Sign-Up Process](#sign-up-process)
+  3. [Navigation and Exploration](#navigation-and-exploration)
+  4. [Creating and Sharing Content](#creating-and-sharing-content)
+  5. [Interaction and Collaboration](#interaction-and-collaboration)
+  6. [Profile and Community Building](#profile-and-community-building)
+  7. [Ease of Use and Accessibility](#ease-of-use-and-accessibility)
+  8. [Continuous Engagement](#continuous-engagement)
+
   ## Welcome and Introduction
   **As a user:**
   - I want to see a visually appealing landing page with a space theme and a welcoming headline.
@@ -218,7 +250,9 @@ A live version of the project can be accessed here:
   - I want to have prominent "Sign Up" and "Log In" buttons to easily join or access the blog.
   - I want to watch a short introductory video or animation showcasing the blog's features.
 
-  [Back to top](#table-of-contents)
+  [Back to User Stories Table of Contents](#user-stories-table-of-contents)
+
+  [Back to Top](#astroshare-blog)
 
   ## Sign-Up Process
   **As a user:**
@@ -226,7 +260,9 @@ A live version of the project can be accessed here:
   - I want to have the option to sign up using my social media accounts (Google, Facebook).
   - I want to be prompted to complete my profile by uploading a profile picture, writing a short bio, and optionally adding links to personal websites or social media profiles after signing up.
 
-  [Back to top](#table-of-contents)
+  [Back to User Stories Table of Contents](#user-stories-table-of-contents)
+
+  [Back to Top](#astroshare-blog)
 
   ## Navigation and Exploration
   **As a user:**
@@ -235,7 +271,9 @@ A live version of the project can be accessed here:
   - I want to see a home feed with the latest posts from users, including photos, articles, and discussions about various astronomical topics.
   - I want each post to include the author’s profile picture, name, post title, content preview, and interaction buttons (Like, Comment, Share).
 
-  [Back to top](#table-of-contents)
+  [Back to User Stories Table of Contents](#user-stories-table-of-contents)
+
+  [Back to Top](#astroshare-blog)
 
   ## Creating and Sharing Content
   **As a user:**
@@ -243,7 +281,22 @@ A live version of the project can be accessed here:
   - I want to have a title field, content field with rich text formatting options, and the ability to add photos either by dragging and dropping or uploading from my device.
   - I want to add tags to categorize my post and a "Post" button to publish my content.
 
-  [Back to top](#table-of-contents)
+  [Back to User Stories Table of Contents](#user-stories-table-of-contents)
+
+  [Back to Top](#astroshare-blog)
+
+  ## Flowchart
+
+  This flowchart was created to determine the flow of the website. It shows which pages are available to the user. It takes into account if the user is logged in to the website or not.
+
+  ![Flow Chart](static/images/readme-images/006_flowchart.jpg)
+
+  ## Entity Relationship Diagram!
+  
+  ![ERD](static/images/readme-images/005_ERD_diagram.jpg)
+
+  The database design for this project includes Four tables. The first table is a review table. This table houses all the data associated with making a review on the site. There is a customer table, which houses the details of the customer and this is linked to a booking table via a foreign key relationship. The booking table contains the information needed in order for users to make a booking. The last table present is the user table. This table has the information necessary for users to have an account on the website and has a foreign key relationship with the customer table.
+
 
   ## Interaction and Collaboration
   **As a user:**
@@ -253,7 +306,9 @@ A live version of the project can be accessed here:
   - I want real-time collaboration with a shared editor for multiple contributors.
   - I want to receive notifications for new comments, likes, and collaboration invites, with a notification bell icon in the menu bar showing a dropdown list of recent notifications.
 
-  [Back to top](#table-of-contents)
+  [Back to User Stories Table of Contents](#user-stories-table-of-contents)
+
+  [Back to Top](#astroshare-blog)
 
   ## Profile and Community Building
   **As a user:**
@@ -263,7 +318,9 @@ A live version of the project can be accessed here:
   - I want to follow other users to receive updates on their posts and activities.
   - I want to use a direct messaging feature for private conversations.
 
-  [Back to top](#table-of-contents)
+  [Back to User Stories Table of Contents](#user-stories-table-of-contents)
+
+  [Back to Top](#astroshare-blog)
 
   ## Ease of Use and Accessibility
   **As a user:**
@@ -273,7 +330,9 @@ A live version of the project can be accessed here:
   - I want a keyboard navigable interface and screen reader compatibility.
   - I want an easily accessible help section with FAQs and tutorials, along with a contact support option for direct assistance.
 
-  [Back to top](#table-of-contents)
+  [Back to User Stories Table of Contents](#user-stories-table-of-contents)
+
+  [Back to Top](#astroshare-blog)
 
   ## Continuous Engagement
   **As a user:**
@@ -282,11 +341,9 @@ A live version of the project can be accessed here:
   - I want to participate in community events such as virtual star-gazing sessions, photo contests, and Q&A sessions with astronomy experts.
   - I want to engage in interactive challenges and quizzes to keep learning and stay engaged with the blog.
 
-  [Back to top](#table-of-contents)
+  [Back to User Stories Table of Contents](#user-stories-table-of-contents)
 
-
-
-
+  [Back to Top](#astroshare-blog)
 
 ## Deployment
 
