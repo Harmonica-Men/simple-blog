@@ -17,6 +17,20 @@ A live version of the project can be accessed here:
     - [Flowchart](#flowchart)
     - [Entity Relationship Diagram](#entity-relationship-diagram)
 
+    - [Agile User Stories Epics Milestones](#agile)
+    - Wireframes
+    - Images
+    - Logo
+    - Favicon
+    - Colour scheme
+    - Fonts
+    - [Database](#database)
+    - Features
+    - Bugs
+    - Testing
+    - Deployment
+    - Credits
+
   # UX  
   #### The UX Table of Contents
   1. [Welcome and Introduction](#1-welcome-and-introduction)
@@ -275,6 +289,12 @@ A live version of the project can be accessed here:
 
   [Back to Top](#astroshare-blog)
 
+
+  # Database
+    PostgreSQL uitleg psycopg2  (pip install) 2.9.6
+    Cloudinary werking generate new API-key ... (pip install)
+
+
   ## Creating and Sharing Content
   **As a user:**
   - I want to click on "Create Post" and access a simple and intuitive editor.
@@ -291,12 +311,14 @@ A live version of the project can be accessed here:
 
   ![Flow Chart](static/images/readme-images/006_flowchart.jpg)
 
+  [Back to Top](#astroshare-blog)
+
   ## Entity Relationship Diagram
   
+  The database design for this project includes Four tables. The first table is a review table. This table houses all the data associated with making a review on the site. There is a customer table, which houses the details of the customer and this is linked to a booking table via a foreign key relationship. The booking table contains the information needed in order for users to make a booking. The last table present is the user table. This table has the information necessary for users to have an account on the website and has a foreign key relationship with the customer table.
   ![ERD](static/images/readme-images/005_ERD_diagram.jpg)
 
-  The database design for this project includes Four tables. The first table is a review table. This table houses all the data associated with making a review on the site. There is a customer table, which houses the details of the customer and this is linked to a booking table via a foreign key relationship. The booking table contains the information needed in order for users to make a booking. The last table present is the user table. This table has the information necessary for users to have an account on the website and has a foreign key relationship with the customer table.
-
+  [Back to Top](#astroshare-blog)
 
   ## Interaction and Collaboration
   **As a user:**
@@ -354,17 +376,20 @@ This site was deployed to and is currently [hosted on the Heroku platform](https
 
 From codeinstitute every student can maintain up to eight databases to run there projects. Here is a step by step guide to install PostgreSQL from Code Institute to the cloud!
 
-  1. Navigate to [PostgreSQL from Code Institute](https://dbs.ci-dbs.net//) and log in with your LMS account
+  1. Navigate to [PostgreSQL from Code Institute](https://dbs.ci-dbs.net//) and input with your LMS account
   ![PostgreSQL database creation step1](static/images/readme-images/001.png)
 
-  2. After you filled in your LMS account the PostgresSQL database manager will automaticly generate a new database for you.
+  2. After you filled in your LMS account the PostgresSQL database manager will automatically generate a new database for you.
   ![PostgreSQL database creation step2](static/images/readme-images/002.png)
 
   3. You now have a brand new PostgreSQL Code Institute database
-  The link to this database and how to manage all your other databases will be send my email. 
+  The link to this database and how to manage all your other databases will be sent to my email. 
   ![PostgreSQL database creation step3](static/images/readme-images/003.png)
-  4. Do note these databases are limited in time and have a life time of operation of 18 months after the date of creation.
+  4. **Note:** These databases are limited in time and have a life time of operation of 18 months after the date of creation.
   ![PostgreSQL database creation step4](static/images/readme-images/004.png)
+  5. infoknop
+  6. copy/paste url-link
+  7. paste this in  your env.py & heroku varibles.
  
 #### Deploy the project 
   In the previous topic, I have created a PostgreSQL database. In this topic, you are challenged to deploy your project to Heroku.
